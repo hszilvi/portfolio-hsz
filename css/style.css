@@ -1,0 +1,87 @@
+/* variables */
+:root {
+    --background-color: #6d706e;
+    --main-color: #2a2e2b;
+    --hightlight-color: #7bb5b8;
+    --p-font-size: 1rem; 
+    --basic-font-weight: 300;
+
+}
+* {
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: var(--p-font-size);
+}
+
+/* body basic parameters mobile first */
+body {
+    min-width: 380px;
+    background-color: white;
+    height: 100vh;
+}
+/* main menu */
+/* unerline on hover */
+/* header with flexbox */
+header {
+    background-color: var(--main-color);
+    /* height: 3rem; */
+    border: 2px solid red;
+    padding: .5rem;
+    align-content: center;
+    display: flex;
+    /* in mobile view flex direction column */
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.8rem;
+    background-color: var(--hightlight-color);
+    font-weight: 500;
+    width: 18rem;
+    text-align: right;
+    padding-right: .5rem;
+}
+.nav-container {
+    /* border: 2px solid blue; */
+    background-color: inherit;
+}
+
+.nav-elements {
+    /* float: inline-end; */
+    background-color: var(--main-color);
+    /* color: var(--hightlight-color); */
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav-element {
+    list-style: none;
+    background-color: inherit;
+    background-color: var(--main-color);
+    padding-right: .7rem;
+    padding-top: .5rem;
+    color: var(--hightlight-color)
+}
+.nav-element > a {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-element > a:hover {
+    text-decoration: underline;
+}
+
+
+/* media queries */
+/* navbar bigger than mobile view */
+@media screen and (min-width: 660px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

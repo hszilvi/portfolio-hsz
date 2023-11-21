@@ -28,8 +28,8 @@ body {
 header {
     background-color: var(--main-color);
     /* height: 3rem; */
-    border: 2px solid red;
-    padding: .5rem;
+    /* border: 2px solid red; */
+    padding: .5rem 0.5rem 0.5rem 0;
     align-content: center;
     display: flex;
     /* in mobile view flex direction column */
@@ -75,7 +75,28 @@ h1 {
 .nav-element > a:hover {
     text-decoration: underline;
 }
+/* featured picture */
+.hero {
+    height: 10rem;
+    /* border: 2px solid red; */
+    position: relative;
+    background-image: url('../assets/images/backgroundimg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
+}
+.hero > h2 {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: var(--hightlight-color);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+}
 
 /* media queries */
 /* navbar bigger than mobile view */

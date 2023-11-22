@@ -107,7 +107,8 @@ h1 {
 .me-container {
     /* border: 2px solid green; */
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    width: 100%;
 }
 .about-elements {
     /* border: 2px solid red; */
@@ -135,9 +136,12 @@ h1 {
 .work-elements {
     display: flex;
     flex-direction: column;
+    /* width: vw; */
 }
 .work-portfolio-wrapp {
     display: grid;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -145,6 +149,7 @@ h1 {
     "surf surf"
     "led calculator"
     "puzzle run";
+    
 }
 .surf {
     grid-area: surf;
@@ -224,6 +229,11 @@ h1 {
         text-align: right;
     }
     /* change portfolio-wrap grid alignments */
+    .work-portfolio-wrapp {
+        /* min-width: 660px; */
+        /* width: vw; */
+        max-width: 1440px;
+    }
 
 
 

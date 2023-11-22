@@ -130,7 +130,7 @@ h1 {
 }
 .about-content {
     margin: 1rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
 }
 .work-elements {
@@ -149,6 +149,7 @@ h1 {
     "surf surf"
     "led calculator"
     "puzzle run";
+    width: 100vw;
     
 }
 .surf {
@@ -206,6 +207,30 @@ h1 {
     position: absolute;
 } */
 
+/* footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 2rem;
+
+
+}
+.footer-links > a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer-links > a:hover {
+    text-decoration: underline;
+}
+
 
 /* media queries */
 /* navbar bigger than mobile view */
@@ -229,10 +254,20 @@ h1 {
         text-align: right;
     }
     /* change portfolio-wrap grid alignments */
-    .work-portfolio-wrapp {
+    /* .work-portfolio-wrapp { */
         /* min-width: 660px; */
-        /* width: vw; */
-        max-width: 1440px;
+        /* width: vh; */
+        /* max-width: 1440px; */
+    /* } */
+    /* change footer in bigger than mobile view */
+    .footer-container {
+        flex-direction: row;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+    .footer-links > a {
+        font-size: 1.2rem;
     }
 
 

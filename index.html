@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="/portfolio-edx/css/style.css"> -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
     <title>Portfolio - edX</title>
 </head>
@@ -16,10 +15,10 @@
         <h1>Szilvia Horvath</h1>
         <nav class="nav-container">
             <ul class="nav-elements">
-                <li class="nav-element"><a href="#">About me</a></li>
-                <li class="nav-element"><a href="#">Work</a></li>
-                <li class="nav-element"><a href="#contact-index">Contact Me</a></li>
-                <li class="nav-element"><a href="#">Resume</a></li>
+                <li class="nav-element"><a href="#about-me">About me</a></li>
+                <li class="nav-element"><a href="#work">Work</a></li>
+                <li class="nav-element"><a href="#contact">Contact Me</a></li>
+                <li class="nav-element"><a href="https://docs.google.com/document/d/1icxNI8J6QmUbsXl13mDdu9kV99GQ8aFdjOx4_XMJD7I/edit?usp=sharing" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -30,45 +29,49 @@
         </section>
         <!-- decorative image section ends -->
         <!-- about me, work boxes and contacts start here -->
-        <article class="me-container">
-            <section class="about-elements">
+        <div class="me-container">
+            <section  id="about-me" class="about-elements">
                 <h3 class="me-element-title">About Me</h3>
                 <div class="about-content-container">                
                     <p class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officiis assumenda dolorem provident. Quam quisquam quod perferendis nemo magnam. Dolorem consequuntur exercitationem voluptas optio nam aut non deleniti numquam iste.
                     Quisquam quasi eos impedit? Veniam illo consequuntur rem minus incidunt nobis cupiditate corporis corrupti rerum possimus ab aspernatur magni voluptatem accusamus, tempore quis earum dignissimos. Id quis sed alias assumenda.</p>
                 </div>
             </section>
-            <section class="work-elements">
+            <section id="work" class="work-elements">
                 <h3 class="me-element-title">Work</h3>
                 <section class="work-portfolio-container">
-                    <section class="surf work-box">
+                    <a href="https://github.com/hszilvi/portfolio-hsz" target="_blank" title="placeholder image" class="surf work-box" >
                         <h4 class="work-title">Surf Report <br><span>MERN Stack</span></h4>
-                    </section>
-                    <section class="led work-box">
+                    </a>
+                    
+                    <a href="https://github.com/hszilvi/portfolio-hsz" target="_blank" title="placeholder image" class="led work-box">
                         <h4 class="work-title">LED Wall <br><span>node</span></h4>
-                    </section>
-                    <section class="calculator work-box">
+                    </a>
+
+                    <a href="https://github.com/hszilvi/portfolio-hsz" target="_blank" title="placeholder image" class="calculator work-box"> 
                         <h4 class="work-title">Calculator <br><span>React/JS</span></h4>
-                    </section>
-                    <section class="puzzle work-box">
+                    </a>         
+                    
+                    <a href="https://github.com/hszilvi/portfolio-hsz" target="_blank" title="placeholder image" class="puzzle work-box" >
                         <h4 class="work-title">Pastel Puzzle <br><span>MERN Stock</span></h4>
-                    </section>
-                    <section class="run work-box">
+                    </a>
+                                    
+                    <a href="https://github.com/hszilvi/portfolio-hsz" target="_blank" title="placeholder image" class="run work-box">                    
                         <h4 class="work-title">Run Buddy <br><span>HTML/CSS</span></h4>
-                    </section>
+                    </a>
+
                 </section>
             </section>
-            <section class="contact-elements">
+            <section id="contact" class="contact-elements">
                 <h3 class="me-element-title">Contact Me</h3>
-                <section class=contact-links>
+                <div class=contact-links>
                     <a href="tel:555555555">5555-55555</a>
-                    <a href="mailto: johndoe@example.com">szilvi@naszta.hu</a>
+                    <a href="mailto:johndoe@example.com">szilvi@naszta.hu</a>
                     <a href="https://github.com/hszilvi" target="_blank">gitHub</a>
-                    <!-- <a href="#">Instagram</a> -->
-                    <a href="#">LinkedIn</a>
-                </section>
+                    <a href="https://www.linkedin.com/in/horvathszilvi/" target="_blank">LinkedIn</a>
+                </div>
             </section>
-        </article>
+        </div>
         <!-- about me and work boxes end -->
     </main>
     <footer class="footer">

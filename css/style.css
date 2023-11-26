@@ -4,7 +4,7 @@
     --seconder-bg-color: rgb(255, 255, 255);
     --main-color: #2a2e2b;
     --hightlight-color: #7bb5b8;
-    --p-font-size: .9rem; 
+    --p-font-size: 1rem; 
     --basic-font-weight: 300;
 
 }
@@ -17,7 +17,6 @@
     font-size: var(--p-font-size);
     color: var(--main-color)
 }
-
 /* body basic parameters mobile first */
 body {
     min-width: 380px;
@@ -25,21 +24,27 @@ body {
     height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
+    /* add padding to prevent the content go uderneath the header */
+    padding-top: 5.5rem;
 }
 /* main menu */
 /* unerline on hover */
 /* header with flexbox */
+/* sticky position for header */
 header {
     background-color: var(--main-color);
-    /* height: 3rem; */
-    /* border: 2px solid red; */
     padding: .5rem 0.5rem 0.5rem 0;
     align-content: center;
     display: flex;
     /* in mobile view flex direction column */
     flex-direction: column;
+    /* fix the position of the header */
+    position: fixed;
+    top: 0;
+    min-width: 380px;
+    width: 100vw;
+    z-index: 100;
 }
-
 h1 {
     font-size: 1.8rem;
     background-color: var(--hightlight-color);
@@ -52,11 +57,8 @@ h1 {
     /* border: 2px solid blue; */
     background-color: inherit;
 }
-
 .nav-elements {
-    /* float: inline-end; */
     background-color: var(--main-color);
-    /* color: var(--hightlight-color); */
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -66,7 +68,7 @@ h1 {
     list-style: none;
     background-color: inherit;
     background-color: var(--main-color);
-    padding-right: .7rem;
+    padding-right: 1rem;
     padding-top: .5rem;
     color: var(--hightlight-color)
 }
@@ -82,13 +84,12 @@ h1 {
 /* featured picture */
 .hero {
     height: 10rem;
-    /* border: 2px solid red; */
     position: relative;
     background-image: url('../assets/images/backgroundimg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    margin-bottom: .5rem;
 }
 .hero > h2 {
     position: absolute;
@@ -98,25 +99,22 @@ h1 {
     padding-left: .5rem;
     padding-right: .5rem;
     font-weight: 500;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem; 
 }
-
 /* work section using flex and grids */
 /* .me-container stucture with grid mobile view first, alld the sections arranged in a column  */
 .me-container {
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 380px;
 }
 .about-elements, .work-elements, .contact-elements {
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    
+    margin-bottom: .5rem;
+    min-width: 380px;
 }
-
 .me-element-title {
     height: 3rem;
     border-bottom: 4px solid var(--main-color);
@@ -126,21 +124,12 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin: 0 0 1rem 0;
-    /* margin-top: 1rem; */
-    /* background-color: yellow; */
 }
-/* .about-content {
-    margin: 1rem;
-} */
-/* .work-elements {
-    display: flex;
-    flex-direction: column;
-    /* width: vw; */
-/* } */
+.about-content-container {
+    padding: 0 .5rem;
+}
 .work-portfolio-container {
     display: grid;
-    /* grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -148,19 +137,13 @@ h1 {
     "surf surf"
     "led calculator"
     "puzzle run";
-    width: 100vw;
-    
+    width: 100vw;  
+    min-width: 380px; 
 }
 .surf {
     grid-area: surf;
-    background-image: url(../assets/images/IMG_0323.JPEG);
-    /* background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: vw; */
+    background-image: url(../assets/images/surf-illustrator.jpg);
     height: 250px;
-
-
 }
 .work-box {
     border: 4px solid var(--hightlight-color);
@@ -170,10 +153,12 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 2;
 }
 .work-box:hover {
     opacity: 0.8;
 }
+
 .work-title {
     background-color: var(--hightlight-color);
     position: absolute;
@@ -185,31 +170,24 @@ h1 {
     font-size: .7rem;
     font-weight: 300;
 }
+/*----------- elements of work container -------------------*/
 .led {
     grid-area: led;
-    background-image: url("../assets/images/IMG_0418.JPEG");
+    background-image: url("../assets/images/ledwall-illustrator.jpg");
 }
 .calculator {
     grid-area: calculator;
-    background-image: url("../assets/images/IMG_0466.JPEG");
+    background-image: url("../assets/images/calc-illustrator.jpg");
 }
 .puzzle {
     grid-area: puzzle;
-    background-image: url("../assets/images/IMG_0499.JPEG");
+    background-image: url("../assets/images/puzzle-illustrator.jpg");
 }
 .run {
     grid-area: run;
-    background-image: url("../assets/images/IMG_0506.JPEG");
+    background-image: url("../assets/images/run-illustrator.jpg");
 }
-/* .work-elements::after {
-    content: "";
-    position: absolute;
-} */
-/* contact container */
-/* .contact-elements {
-    display: flex;
-    flex-direction: column;
-} */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 .contact-links {
     display: flex;
     flex-direction: column;
@@ -217,10 +195,7 @@ h1 {
     align-items: center;
     width: 100vw;
     padding: 0 2rem;
-
-
 }
-
 .contact-links > a {
     font-size: 1.2rem;
     text-decoration: none;
@@ -229,7 +204,6 @@ h1 {
 .contact-links > a:hover {
     text-decoration: underline;
 }
-
 .footer {
 margin: 2rem auto;
 }
@@ -239,44 +213,39 @@ margin: 2rem auto;
     text-align: center;
     color: var(--hightlight-color);
 }
-
-
-
-
-
+/* --------------------------------------------------------------------------------------- */
 /* -------------------------------------media queries -------------------------------------*/
 /* navbar bigger than mobile view */
 @media screen and (min-width: 660px) {
     /* modify the navbar in bigger than mobile view */
+    body {
+        padding-top: 3.7rem;
+    }
     header {
         flex-direction: row;
         justify-content: space-between;
+        max-width: 1440px;
     }
     .hero {
         margin-bottom: 3rem;
     }
+    /* make the me containter smaller in desktop view */
     .me-container {
         width: 90%;
         margin: 0 auto;
     }
-    /* change about element in bigger than mobile view */
     /* change flex direction from columt to row*/
     .about-elements, .work-elements, .contact-elements {
         flex-direction: row;
         max-height: max-content;
     }
-    /* change the border line of title */
+    /* change the underline of titles to left border of the content */
     .me-element-title {
-        /* background-color: green; */
         border-bottom: none;
         min-width: 11rem;
         text-align: right;
         font-size: 2.5rem;
     }
-    /* .about-content {
-        border-left: 5px solid var(--background-color);
-    } */
-    /* change portfolio-wrap grid alignments */
     .work-portfolio-container {
         border-left: 4px solid var(--background-color);
         margin-bottom: 3rem;
@@ -287,30 +256,16 @@ margin: 2rem auto;
         border-left: 4px solid var(--background-color);
         margin-bottom: 3rem;
         margin-left: 1rem;
-        padding-left: 1.2rem;
-    
+        padding-left: 1.9rem; 
+        min-height: 80px;
     }
-
-    /* .work-portfolio-wrapp { */
-        /* min-width: 660px; */
-        /* width: vh; */
-        /* max-width: 1440px; */
-    /* } */
-    /* change footer in bigger than mobile view */
-    /* .footer-container {
-        flex-direction: row;
-    } */
     .contact-links {
         flex-direction: row;
         border-left: 4px solid var(--background-color);
         margin-left: 1rem;
+        min-height: 80px;
     }
     .contact-links > a {
-        font-size: 1.2rem;
-        
+        font-size: 1.1rem;       
     }
-
-
-
-
 }
